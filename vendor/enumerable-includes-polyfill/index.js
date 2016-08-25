@@ -37,7 +37,7 @@
   });
 
   Ember.MutableArray.reopen({
-    addObject(obj) {
+    addObject: function(obj) {
       if (!this.includes(obj)) {
         this.pushObject(obj);
       }
@@ -47,7 +47,7 @@
   });
 
   Ember.Enumerable.reopen({
-    includes(obj) {
+    includes: function(obj) {
       Ember.assert('Enumerable#includes cannot accept a second argument "startAt" as enumerable items are unordered.', arguments.length === 1);
 
       var len = Ember.get(this, 'length');
