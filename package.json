@@ -1,9 +1,8 @@
 {
   "name": "ember-runtime-enumerable-includes-polyfill",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "Polyfill for ember-runtime-enumerable-includes feature (noop in Ember >= 2.8)",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "scripts": {
@@ -11,11 +10,14 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwjblue/ember-runtime-enumerable-includes-polyfill.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Robert Jackson <me@rwjblue.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -49,5 +51,10 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/rwjblue/ember-runtime-enumerable-includes-polyfill/issues"
+  },
+  "homepage": "https://github.com/rwjblue/ember-runtime-enumerable-includes-polyfill#readme"
 }
