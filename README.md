@@ -1,6 +1,15 @@
-# Ember-runtime-enumerable-includes-polyfill
+# ember-runtime-enumerable-includes-polyfill
 
-This README outlines the details of collaborating on this Ember addon.
+This addon polyfills the `ember-runtime-enumerable-includes` feature added to Ember 
+in 2.8.0. This addon is intended to allow addons and/or applications use the new 
+functionality and avoid deprecations while still supporting older Ember versions.
+
+Read more details on the feature here:
+
+* [emberjs/rfcs#136](https://github.com/emberjs/rfcs/pull/136)
+* [Deprecation Guide](http://emberjs.com/deprecations/v2.x/#toc_enumerable-contains)
+
+[![Build Status](https://travis-ci.org/rwjblue/ember-runtime-enumerable-includes-polyfill.svg?branch=master)](https://travis-ci.org/rwjblue/ember-runtime-enumerable-includes-polyfill)
 
 ## Installation
 
