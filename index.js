@@ -4,7 +4,7 @@
 module.exports = {
   name: 'ember-runtime-enumerable-includes-polyfill',
 
-  included(app) {
+  included: function(app) {
     this._super.included.apply(this, arguments);
 
     var importContext;
