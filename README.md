@@ -11,6 +11,15 @@ Read more details on the feature here:
 
 [![Build Status](https://travis-ci.org/rwjblue/ember-runtime-enumerable-includes-polyfill.svg?branch=master)](https://travis-ci.org/rwjblue/ember-runtime-enumerable-includes-polyfill)
 
+## Usage
+To use this addon in your project, install it as a runtime dependency:
+
+```bash
+npm install --save ember-runtime-enumerable-includes-polyfill
+```
+
+That's it!
+
 ## Installation
 
 * `git clone <repository-url>` this repository
