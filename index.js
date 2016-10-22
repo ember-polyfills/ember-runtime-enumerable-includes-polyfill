@@ -15,13 +15,21 @@ module.exports = {
       importContext = this._findHostForLegacyEmberCLI();
     }
 
-    var VersionChecker = require('ember-cli-version-checker');
-    var checker = new VersionChecker(this);
-    var dep = checker.for('ember', 'bower');
-
-    if (dep.lt('2.8.0-beta.1')) {
+    if (this._getEmberVersion().lt('2.8.0-beta.1')) {
       importContext.import('vendor/enumerable-includes-polyfill/index.js');
     }
+  },
+
+  _getEmberVersion: function() {
+    var VersionChecker = require('ember-cli-version-checker');
+    var checker = new VersionChecker(this);
+    var emberVersionChecker = checker.for('ember', 'bower');
+
+    if (emberVersionChecker.version) {
+      return emberVersionChecker;
+    }
+
+    return checker.for('ember-source', 'npm');
   },
 
   // included from https://git.io/v6F7n
