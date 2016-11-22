@@ -15,7 +15,9 @@ module.exports = {
       importContext = this._findHostForLegacyEmberCLI();
     }
 
-    if (this._getEmberVersion().lt('2.8.0-beta.1')) {
+    var emberVersion = this._getEmberVersion();
+
+    if (emberVersion && emberVersion.lt('2.8.0-beta.1')) {
       importContext.import('vendor/enumerable-includes-polyfill/index.js');
     }
   },
@@ -29,7 +31,13 @@ module.exports = {
       return emberVersionChecker;
     }
 
-    return checker.for('ember-source', 'npm');
+    emberVersionChecker = checker.for('ember-source', 'npm');
+
+    if (emberVersionChecker.version) {
+      return emberVersionChecker;
+    }
+
+    this.ui.writeLine('[ember-runtime-enumerable-includes-polyfill] Cannot identify Ember version to determine if polyfill is needed.');
   },
 
   // included from https://git.io/v6F7n
