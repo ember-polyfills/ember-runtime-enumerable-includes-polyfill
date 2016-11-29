@@ -1,6 +1,6 @@
 {
   "name": "ember-runtime-enumerable-includes-polyfill",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Polyfill for ember-runtime-enumerable-includes feature (noop in Ember >= 2.8)",
   "directories": {
     "test": "tests"
